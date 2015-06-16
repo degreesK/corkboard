@@ -27,7 +27,7 @@ class CorksController < ApplicationController
 
   def update
     if @cork.update(cork_params)
-      redirect_to @cork, notice: "Cork was Successfully updated!"
+      redirect_to @cork, notice: "Post was Successfully updated!"
     else
       render 'edit'
     end
