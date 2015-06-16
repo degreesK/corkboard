@@ -9,11 +9,11 @@ class CorksController < ApplicationController
   end
 
   def new
-    @cork = Cork.new
+    @cork = current_user.corks.build
   end
 
   def create
-    @cork = Cork.new(cork_params)
+    @cork = current_user.corks.build(cork_params)
 
     if @cork.save
       redirect_to @cork, notice: "Successfully created new Post"
